@@ -3,11 +3,14 @@ const wordSearch = (letters, word) => {
     for (l of horizontalJoin) {
         if (l.includes(word)) return true;
     } 
-    let backwardsHor =[]
-    horizontalJoin.slice().reverse().forEach(function(item)=>)  
     for(let b = horizontalJoin.length-1; b >= 0; b-- ) {
-        if (b.includes(word)) return true;
-    } 
+        backwardsHor.push(horizontalJoin[b])
+            for (p of backwardsHor){
+                if(p.includes(word)) return true;
+            
+            }
+            
+        }
     let verticalWord = transpose(letters);
     const verticalJoin = verticalWord.map(ls => ls.join(''))
     for (l of verticalJoin) {
